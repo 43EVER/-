@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>学习目标</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h2 id="%e5%ad%a6%e4%b9%a0%e7%9b%ae%e6%a0%87">学习目标</h2>
+<ol>
+<li>传输层功能</li>
+<li>传输层协议</li>
+<li>端口号</li>
+<li>关于传输层的可靠传输</li>
+</ol>
+<h2 id="%e4%bc%a0%e8%be%93%e5%b1%82%e5%8a%9f%e8%83%bd">传输层功能</h2>
+<p>概括：完成端应用进程之间的通信</p>
+<blockquote>
+<p>网络层的端到端指的是IP
+传输层的端到端指的是端</p>
+</blockquote>
+<ul>
+<li>如何标识应用进程
+<ul>
+<li>端口号（Port）</li>
+</ul>
+</li>
+<li>什么协议完成传输层功能
+<ul>
+<li>TCP</li>
+<li>UDP</li>
+</ul>
+</li>
+<li>TCP 和 UDP 对比
+<ul>
+<li>为什么设置两个协议？
+<ul>
+<li>基于不同的用户需求，提供快速传输的UDP协议，及支持可靠传输，但过程复杂，开销较大的TCP协议</li>
+</ul>
+</li>
+<li>如何选择两个协议？
+<ul>
+<li>基于应用层协议</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP(Transport Control Protocol) 传输控制协议</td>
+<td>UDP(User Data Protocol) 用户数据报协议</td>
+</tr>
+<tr>
+<td>TCP提供面向连接的服务过程，连接的建立，维护，释放</td>
+<td>UDP提供无连接的服务过程</td>
+</tr>
+<tr>
+<td>1. 提供可靠的数据传输 跟踪已传输的，确认已接收的，重新传输未确认数据<br>2. 流量控制（滑动窗口）<br>3. 拥塞控制（重复确认，响应超时）</td>
+<td>1. 开销小，速度快<br>2. 提供尽力交付，不保证可靠传输<br>3. 按接收顺序完成上传过程</td>
+</tr>
+<tr>
+<td>20 Bytes（固定）可扩展</td>
+<td>8 Bytes</td>
+</tr>
+<tr>
+<td>源端口、目的端口<br>序列号（32）<br>确认号（32）<br>报头长度(4)、保留（6）控制（6）窗口（16）</td>
+<td>源端口（16）、目的端口（16）<br>长度（16）、校验和（16）</td>
+</tr>
+<tr>
+<td></td>
+<td>无连接<br>不可靠传输<br>没有有序的数据重构<br>无流量控制<br>无状态协议</td>
+</tr>
+<tr>
+<td></td>
+<td>域名系统（DNS）<br>视频流<br>IP语音（VoIP）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>协议簇: 为了完成特定功能的一整套协议
+服务模式：C/S P2P
+服务过程：面向连接服务，无连接服务</p>
+<blockquote>
+<h5 id="%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b%e5%9b%9b%e6%ac%a1%e6%8c%a5%e6%89%8b%e8%bf%87%e7%a8%8b">三次握手四次挥手过程</h5>
+</blockquote>
+<blockquote>
+<h5 id="%e4%bc%a0%e8%be%93%e5%b1%82%e4%bc%a0%e8%be%93%e8%b4%a8%e9%87%8f">传输层传输质量</h5>
+<p>跟踪已传输的
+确认已接收的
+重传未确认的</p>
+</blockquote>
+</blockquote>
+<h3 id="%e7%ab%af%e5%8f%a3%e5%8f%b7">端口号</h3>
+<p>端口（Port）
+逻辑信息，用来区分应用程序</p>
+<ul>
+<li>基本特征
+<ul>
+<li>16 Bits</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+    </body>
+    </html>
